@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServersService } from './servers.service';
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute, Data } from "@angular/router";
 
 @Component({
   selector: 'app-servers',
@@ -15,6 +15,7 @@ export class ServersComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit() {
+
     this.servers = this.serversService.getServers();
   }
 
